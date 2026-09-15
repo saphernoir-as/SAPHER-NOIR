@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAPHER NOIR — Wear The Silence, Stand Out</title>
+<meta name="description" content="SAPHER NOIR official store. Contemporary clothing from Nepal.">
+<style>
+:root{--bg:#080808;--panel:#111;--text:#f3efe8;--muted:#99948b;--line:#292929;--cream:#e9e3d9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.wrap{width:min(1180px,92%);margin:auto}.top{background:#0d0d0d;border-bottom:1px solid var(--line);text-align:center;padding:9px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#aaa}
+header{position:sticky;top:0;z-index:30;background:rgba(8,8,8,.94);backdrop-filter:blur(16px);border-bottom:1px solid #1e1e1e}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{width:112px;height:58px;object-fit:contain}.navlinks{display:flex;gap:28px;font-size:11px;text-transform:uppercase;letter-spacing:.16em}.navlinks a{color:#ccc}.cartbtn{background:transparent;border:1px solid #333;color:white;border-radius:999px;padding:10px 15px;font-size:11px}
+.hero{min-height:76vh;display:grid;place-items:center;text-align:center;border-bottom:1px solid var(--line);background:radial-gradient(circle at 50% 30%,#28231f,#0a0a0a 48%,#080808 75%)}.eyebrow{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#aaa}.hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(54px,9vw,118px);line-height:.88;letter-spacing:-.055em;margin:22px 0}.hero p{max-width:540px;color:#aaa;line-height:1.8;margin:0 auto 30px;font-size:14px}.btn{border:1px solid var(--cream);background:var(--cream);color:#090909;padding:14px 22px;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:700}.btn.alt{background:transparent;color:var(--cream)}
+section{padding:78px 0}.heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.heading h2{font:400 42px Georgia,serif;margin:0}.heading small{color:#777;text-transform:uppercase;letter-spacing:.16em}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:#101010;border:1px solid var(--line)}.pic{aspect-ratio:3/4;overflow:hidden;background:#191919}.pic img{width:100%;height:100%;object-fit:cover;transition:.45s}.product:hover img{transform:scale(1.035)}.details{padding:16px}.details h3{font-size:13px;margin:0 0 7px}.price{font-size:13px;color:#c9c3ba}.add{width:100%;margin-top:14px;padding:11px;background:transparent;color:white;border:1px solid #3a3a3a;font-size:10px;text-transform:uppercase;letter-spacing:.13em}.add:hover{background:white;color:black}
+.manifesto{border-block:1px solid var(--line);text-align:center;padding:72px 15px}.manifesto h2{font:400 44px Georgia,serif;margin:10px 0 18px}.manifesto p{max-width:610px;margin:auto;color:#999;line-height:1.8}
+footer{border-top:1px solid var(--line);padding:55px 0 25px}.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}.foot img{width:130px}.foot h4{font-size:10px;letter-spacing:.18em;text-transform:uppercase}.foot p,.foot a{font-size:12px;color:#888;line-height:1.9}.copy{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;color:#555;font-size:10px}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:80}.overlay.show{display:block}.drawer{position:absolute;right:0;top:0;height:100%;width:min(480px,94vw);background:#0d0d0d;border-left:1px solid #333;padding:24px;overflow:auto}.drawerhead{display:flex;justify-content:space-between;align-items:center}.drawer h2{font:400 30px Georgia,serif}.x{background:none;border:0;color:#fff;font-size:25px}.item{display:grid;grid-template-columns:1fr auto;gap:12px;padding:16px 0;border-bottom:1px solid #222;font-size:12px}.item select{background:#111;color:#eee;border:1px solid #333;padding:6px}.remove{background:none;border:0;color:#777;font-size:11px}.total{display:flex;justify-content:space-between;padding:20px 0;font-size:14px}.full{width:100%}
+.form{display:grid;gap:12px}.form input,.form textarea,.form select{width:100%;background:#111;border:1px solid #333;color:#eee;padding:13px}.form textarea{min-height:80px;resize:vertical}.notice{font-size:11px;color:#777;line-height:1.6}
+.success{padding:35px 0;text-align:center}.success h2{font:400 34px Georgia,serif}.orderid{font-weight:700;color:#eee}
+@media(max-width:800px){.navlinks{display:none}.grid{grid-template-columns:repeat(2,1fr);gap:10px}.foot{grid-template-columns:1fr 1fr}.hero{min-height:70vh}}@media(max-width:500px){section{padding:58px 0}.heading h2{font-size:34px}.foot{grid-template-columns:1fr}.hero h1{font-size:62px}}
+</style>
+</head>
+<body>
+<div class="top">Free delivery on selected Kathmandu orders • SAPHER NOIR</div>
+<header><div class="wrap nav">
+<a href="#"><img class="logo" src="/assets/logo.png" alt="SAPHER NOIR"></a>
+<nav class="navlinks"><a href="#shop">Shop</a><a href="#manifesto">The Brand</a><a href="#contact">Contact</a></nav>
+<button class="cartbtn" onclick="openCart()">Bag (<span id="count">0</span>)</button>
+</div></header>
+
+<main>
+<section class="hero"><div>
+<div class="eyebrow">SAPHER NOIR / EST. 2026</div>
+<h1>WEAR THE<br>SILENCE.</h1>
+<p>Minimal silhouettes. Quiet confidence. Pieces designed to stand out without asking for attention.</p>
+<a class="btn" href="#shop">Shop the collection</a>
+</div></section>
+
+<section id="shop"><div class="wrap">
+<div class="heading"><h2>Shop</h2><small>Current collection</small></div>
+<div id="products" class="grid"></div>
+</div></section>
+
+<section id="manifesto" class="manifesto"><div class="wrap">
+<div class="eyebrow">The philosophy</div><h2>Quiet. Sharp. Unforgettable.</h2>
+<p>SAPHER NOIR is built around understated pieces for people who don't need noise to make an impression. Clean lines, wearable tones and a distinct attitude.</p>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+<div class="foot"><div><img src="/assets/logo.png" alt="SAPHER NOIR"><p>Wear the silence, stand out.<br>Contemporary clothing from Nepal.</p></div>
+<div><h4>Shop</h4><p><a href="#shop">All products</a><br><a href="#shop">New drop</a></p></div>
+<div><h4>Support</h4><p><a href="#">Shipping policy</a><br><a href="#">Returns</a><br><a href="#">Size guide</a></p></div>
+<div><h4>Connect</h4><p><a href="#">Instagram</a><br><a href="#">TikTok</a><br><a href="mailto:hello@saphernoir.com">Email</a></p></div></div>
+<div class="copy">© 2026 SAPHER NOIR. All rights reserved.</div>
+</div></footer>
+
+<div id="overlay" class="overlay" onclick="if(event.target===this)closeCart()"><aside class="drawer">
+<div class="drawerhead"><h2>Your Bag</h2><button class="x" onclick="closeCart()">×</button></div>
+<div id="cart"></div><div class="total"><span>Total</span><strong id="total">NPR 0</strong></div>
+<button class="btn full" onclick="checkout()">Checkout</button>
+</aside></div>
+
+<script>
+let products=[],bag=JSON.parse(localStorage.getItem("sn-bag")||"[]");
+const money=n=>"NPR "+Number(n).toLocaleString();
+async function init(){
+ products=await fetch("/api/products").then(r=>r.json());
+ document.getElementById("products").innerHTML=products.map(p=>`
+ <article class="product"><div class="pic"><img src="${p.image}" alt="${p.name}"></div><div class="details">
+ <h3>${p.name}</h3><div class="price">${money(p.price)}</div>
+ <button class="add" onclick="add('${p.id}')">Add to bag</button></div></article>`).join("");
+ render();
+}
+function save(){localStorage.setItem("sn-bag",JSON.stringify(bag))}
+function add(id){const p=products.find(x=>x.id===id);let x=bag.find(i=>i.id===id);if(x)x.qty++;else bag.push({id:p.id,name:p.name,price:p.price,qty:1,size:p.sizes[0]});save();render();openCart()}
+function remove(i){bag.splice(i,1);save();render()}
+function render(){
+ document.getElementById("count").textContent=bag.reduce((a,x)=>a+x.qty,0);
+ document.getElementById("total").textContent=money(bag.reduce((a,x)=>a+x.price*x.qty,0));
+ document.getElementById("cart").innerHTML=bag.length?bag.map((x,i)=>`
+ <div class="item"><div><b>${x.name}</b><br><span style="color:#777">${money(x.price)} × ${x.qty}</span><br>
+ <select onchange="bag[${i}].size=this.value;save()">${(products.find(p=>p.id===x.id)?.sizes||["S","M","L","XL"]).map(s=>`<option ${s===x.size?"selected":""}>${s}</option>`).join("")}</select></div>
+ <button class="remove" onclick="remove(${i})">Remove</button></div>`).join(""):'<p class="notice" style="padding:25px 0;border-block:1px solid #222">Your bag is empty.</p>';
+}
+function openCart(){document.getElementById("overlay").classList.add("show")}
+function closeCart(){document.getElementById("overlay").classList.remove("show")}
+function checkout(){
+ if(!bag.length)return alert("Your bag is empty.");
+ document.getElementById("cart").innerHTML=`
+ <div class="form" style="padding-top:20px"><div class="notice">Delivery details</div>
+ <input id="name" placeholder="Full name" required><input id="phone" placeholder="Phone number" required>
+ <textarea id="address" placeholder="Full delivery address" required></textarea>
+ <input id="city" placeholder="City / area" value="Kathmandu">
+ <select id="payment"><option value="cod">Cash on Delivery</option><option value="esewa">eSewa (connect merchant account)</option><option value="khalti">Khalti (connect merchant account)</option></select>
+ <div class="notice">Online payments are prepared for merchant-gateway integration. Live keys must be added on the server; never place secret keys in the browser.</div>
+ <button class="btn full" onclick="placeOrder()">Place order</button></div>`;
+}
+async function placeOrder(){
+ const customer={name:document.getElementById("name").value.trim(),phone:document.getElementById("phone").value.trim(),address:document.getElementById("address").value.trim(),city:document.getElementById("city").value.trim()};
+ const paymentMethod=document.getElementById("payment").value;
+ if(!customer.name||!customer.phone||!customer.address)return alert("Please fill your name, phone and address.");
+ const res=await fetch("/api/orders",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({customer,items:bag,paymentMethod})});
+ const data=await res.json();
+ if(!res.ok)return alert(data.error||"Could not create order.");
+ bag=[];save();render();
+ document.getElementById("cart").innerHTML=`<div class="success"><div class="eyebrow">Order received</div><h2>Thank you.</h2><p class="notice">Your order number is <span class="orderid">${data.orderId}</span>.</p><p class="notice">We'll contact you on ${customer.phone} to confirm delivery.</p></div>`;
+}
+init();
+</script>
+</body></html>
